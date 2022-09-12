@@ -1,23 +1,7 @@
-Code Nation Studio Multiplayer Game
+Multiplayer Game
 ===================================
 
-**React/Firebase project designed for [Code Nation][code-nation] students**
-
-Students will implement a React/Firebase app that requires collaboration
-between two or more users, be it a game or some other real time, multi-user
-program. Teachers provide starter code (this repository) to handle user
-authentication, "waiting room", and user matching functionality.
-
-At the end of the project, teachers will merge all groups' projects into a
-single React application to be hosted forever, making any game playable at any
-time (and available for any future job application).
-
-As of the 2020-2021 school year, **we switched to using functional components**
-rather than class-based components. This repository supports both component
-styles, but newer games should use functional components to take advantage of
-the latest changes.
-
-Functional Components: Chatroom
+Functional Components
 -------------------------------------------------------------
 
 ### Step 1: Register the new component; access backend data
@@ -1127,60 +1111,3 @@ export default class TicTacToe extends GameComponent {
 
 Try playing the game with a teammate to confirm that you cannot edit the Tic
 Tac Toe board when it is not your turn.
-
-#### Step 4.3: Announce when the game is over
-
-**An exercise for the reader**
-
-Using `this.state.currentUser` and `UserApi.getName(user_id)`, render a message
-indicating the current turn. For example, "Waiting for Joe Tessler to make a
-move."
-
-Add the code that determines if a "winning condition" exists. In other words,
-does the Tic Tac Toe board have one of the following three configurations:
-
-1. A horizontal row of three `X`s or `O`s
-1. A vertical column of three `X`s or `O`s
-1. A diagonal line of three `X`s or `O`s
-
-Run this logic whenever the Firebase data changes, i.e. in the
-`onSessionDataChanged(data)` function. Update the rendered message if a winning
-condition is found, e.g. "Joe Tessler wins!"
-
-### Step 5: Game style improvements (stretch goal)
-
-**An exercise for the reader**
-
-This game framework was created using the [Material UI React
-library][material-ui], which provides React components pre-styled with Google's
-Material theme. **Check out the component demos and try using one in your
-game!**
-
-Troubleshooting
----------------
-
-### I can't log in!
-
-Are you using a new browser-based IDE that we have not used in class? Ask your
-teacher to whitelist the new IDE in Firebase.
-
-### My editor/IDE is really slow
-
-This happens when React tries to reload the application every time the file
-changes. Try disabling this feature so React only reloads when you save the
-file. In codesandbox.io, go to `File -> Preferences -> CodeSandbox Settings`,
-then disable `Preview on edit` in the `Preview` preferences.
-
-Resources
----------
-
-  - Material UI: [React components documentation][material-ui]
-  - React: [ReactJS documentation][reactjs]
-  - Firebase: [Firebase JS documentation][firebase-js]
-
-[code-nation]:https://codenation.org
-[firebase-db]:https://firebase.google.com/docs/database/web/read-and-write
-[firebase-js]:https://firebase.google.com/docs/reference/js/
-[material-ui]:https://www.material-ui.com/#/components/app-bar
-[object-values]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values
-[reactjs]:https://reactjs.org/docs/hello-world.html
